@@ -20,6 +20,7 @@ class PoolsController < ApplicationController
       redirect_to pool_path(@pool), notice: "Pool was successfully created"
     else
       render: new
+    end
   end
 
   def edit
