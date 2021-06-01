@@ -15,5 +15,4 @@ class PoolsController < ApplicationController
   #    @pool = Pool.find(params[:id])
   # end
 
-
 end
