@@ -1,0 +1,40 @@
+.pools-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 30px;
+  background-color: white;
+}
+
+.card-pool {
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.card-pool h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: blue;
+}
+
+.card-pool p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  color: blue;
+  font-weight: lighter;
+}
+
+
+.card-pool .card-pool-infos {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-pool img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
