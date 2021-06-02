@@ -6,7 +6,7 @@
         <%= cl_image_tag @pool.photo.key, height: 300, crop: :fill %>
           <h2><%= @pool.title %></h2>
             <p><%= @pool.address %></p>
-            <p><%= @pool.size %></p>
+            <p><%= @pool.size %> m<sup>2</sup></p>
             <p><%= @pool.description %></p>
           <%= link_to "Back to list", pools_path, class: "btn btn-primary" %>
       </div>
