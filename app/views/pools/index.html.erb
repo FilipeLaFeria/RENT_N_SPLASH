@@ -17,5 +17,5 @@
         <% end %>
       <% end %>
   </div>
-  <img id="map" src='https://res.cloudinary.com/dhyx17ztf/image/upload/v1622216569/sfxs5xf90bkzuvy64tmqga1ye8yi.jpg'>
+  <div id="map"style="width: 100%; height: 600px;"data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>

@@ -3,6 +3,12 @@ class PoolsController < ApplicationController
 
   def index
     @pools = Pool.all
+    @markers = @pools.geocoded.map do|pool|
+      {
+        lat: pool.latitude,
+        lng: pool.longitude
+      }
+    end
   end
 
   def show

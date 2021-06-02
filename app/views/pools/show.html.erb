@@ -15,9 +15,11 @@
 
     <div class="card-map-calendar col-6">
       <img src="https://joomly.net/frontend/web/images/googlemap/map.png">
-      <div class="form-wrapper">
+      <div class="form-wrapper">Date
         <%= simple_form_for :search, method: "get" do |f| %>
-          <div class="d-flex"><%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %><%= f.button :submit, "Book this pool", class: "btn btn-primary"%></div>
+          <div class="calendar-form d-flex">
+            <%= f.input :date, as: :string, required: false, label: false, input_html: {class: "datepicker"}, style: "width: 100%" %>
+            <%= f.button :submit, "Book this pool", class: "btn btn-primary form-control", style: "width: 50%"%></div>
         <% end %>
       </div>
     </div>
