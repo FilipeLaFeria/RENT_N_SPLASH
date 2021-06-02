@@ -1,13 +1,16 @@
-.container{
-  width: 1000px;
+.container {
+  display: block;
+  width: 1200px;
+  height: 100vh;
   margin: 20px auto;
+  padding: 16px;
+  border-radius: 5px;
 }
-
 
 .my_card {
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 10px;
+  padding: 16px;
   color: $blue;
   font-size: 20px;
 }
@@ -18,14 +21,20 @@
   border-radius: 5px;
 }
 
-.my_card p{
-  margin-bottom: 0px;
+.card-img-info {
+  padding-top: 5px;
+}
+
+.my_card h3 {
+  margin-top: 6px;
+}
+
+.my_card p {
+  margin-bottom: 2px;
   font-size: 14px
 }
 
-
-
-.card-map-calendar{
+.card-map-calendar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,7 +42,6 @@
 
 .card-map-calendar img {
   border-radius: 5px;
-
 }
 
 .calendar-form {
