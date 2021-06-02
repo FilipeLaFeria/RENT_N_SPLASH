@@ -1,10 +1,18 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand {
+  font-family: 'Fredoka One';
+  color: $blue;
 }
 
 .navbar-lewagon .navbar-brand img {
