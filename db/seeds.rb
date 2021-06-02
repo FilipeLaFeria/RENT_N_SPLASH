@@ -15,7 +15,7 @@ pool_1 = Pool.create!(title: "Great for swimming", address: "Avenida Marginal, L
 pool_1.photo.attach(io: file_1, filename: 'swimming_dygm3a.jpg', content_type: 'image/jpg')
 
 file_2 = URI.open('https://res.cloudinary.com/dhyx17ztf/image/upload/v1622563137/green_ayovuc.jpg')
-pool_2 = Pool.create!(title: "Salty", address: "Monte Alentejano, São Teotónio", description: "Green salt water pool", size: '45 m2', user_id: aura.id)
+pool_2 = Pool.create!(title: "Salty", address: "Carvalhal, Zambujeira do Mar", description: "Green salt water pool", size: '45 m2', user_id: aura.id)
 pool_2.photo.attach(io: file_2, filename: 'green_ayovuc.jpg', content_type: 'image/jpg')
 
 file_3 = URI.open('https://res.cloudinary.com/dhyx17ztf/image/upload/v1622544682/jacuzzi_mkkdgm.jpg')
@@ -31,7 +31,7 @@ pool_5 = Pool.create!(title: "Beach side", address: "Costa da Caparica, Setúbal
 pool_5.photo.attach(io: file_5, filename: 'beach_p317ar.jpg', content_type: 'image/jpg')
 
 file_6 = URI.open('https://res.cloudinary.com/dhyx17ztf/image/upload/v1622555345/hotel_x4x4nl.jpg')
-pool_6 = Pool.create!(title: "Our pateo pool", address: "Costa Alentejana, Arrifana", description: "A pool for all our guests", size: '50 m2', user_id: joao.id)
+pool_6 = Pool.create!(title: "Our pateo pool", address: "Santa Catarina, Sines", description: "A pool for all our guests", size: '50 m2', user_id: joao.id)
 pool_6.photo.attach(io: file_6, filename: 'hotel_x4x4nl.jpg', content_type: 'image/jpg')
 
 file_7 = URI.open('https://res.cloudinary.com/dhyx17ztf/image/upload/v1622561776/rooftop_pzbekq.jpg')
@@ -39,11 +39,11 @@ pool_7 = Pool.create!(title: "Rooftop pool", address: "Marquês de Pombal, Lisbo
 pool_7.photo.attach(io: file_7, filename: 'rooftop_pzbekq.jpg', content_type: 'image/jpg')
 
 file_8 = URI.open('https://res.cloudinary.com/dhyx17ztf/image/upload/v1622561775/lake_n8njct.jpg')
-pool_8 = Pool.create!(title: "Lake dive", address: "Quinta da Rafaela, Évora", description: "A dive and multiple activities in it", size: '400 m2', user_id: joao.id)
+pool_8 = Pool.create!(title: "Lake dive", address: "Bacelo, Évora", description: "A dive and multiple activities in it", size: '400 m2', user_id: joao.id)
 pool_8.photo.attach(io: file_8, filename: 'lake_n8njct.jpg', content_type: 'image/jpg')
 
 file_9 = URI.open('https://res.cloudinary.com/dhyx17ztf/image/upload/v1622631869/douro_dpbji8.jpg')
-pool_9 = Pool.create!(title: "Bio Pool", address: "Travessia do Douro, Porto", description: "Dip on our natural pool", size: '200 m2', user_id: aura.id)
+pool_9 = Pool.create!(title: "Bio Pool", address: "Ericeira", description: "Dip on our natural pool", size: '200 m2', user_id: aura.id)
 pool_9.photo.attach(io: file_9, filename: 'douro_dpbji8.jpg', content_type: 'image/jpg')
 
 puts "#{User.count} users where created..."
