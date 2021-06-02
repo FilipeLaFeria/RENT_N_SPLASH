@@ -32,7 +32,10 @@ import { initFlatpickr } from "../plugins/flatpickr";
 
 import { initMapbox } from '../plugins/init_mapbox';
 
+import { loadDynamicBannerText } from '../plugins/banner';
+
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initFlatpickr();
+  loadDynamicBannerText();
 })
