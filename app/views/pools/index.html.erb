@@ -2,20 +2,17 @@
   <div class="pools-container">
     <% @pools.each do |pool| %>
       <%= link_to pool_path(pool), class:'text-decoration-none' do %>
-        <div class="card-pool d-flex justify-content-center">
+        <div class="card-pool card-pool-height d-flex justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path pool.photo.key, height: 300, crop: :fill %>')">
+        </div>
+        <div class="card-pool-infos">
           <div>
-            <%= cl_image_tag pool.photo.key, height: 300, crop: :fill %>
-              <div class="card-pool-infos">
-                <div>
-                  <h2><%= pool.title %></h2>
-                  <p><%= pool.address %></p>
-                </div>
-                <h2 class="card-pool-size"><%= pool.size %></h2>
-              </div>
-            </div>
+            <h2><%= pool.title %></h2>
+            <p><%= pool.address %></p>
           </div>
+            <h2 class="card-pool-size"><%= pool.size %></h2>
+        </div>
         <% end %>
       <% end %>
-  </div>
-  <div id="map"style="width: 600px; height: 820px; "data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+  <div id="map"style="width: 600px; height: 920px; "data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>

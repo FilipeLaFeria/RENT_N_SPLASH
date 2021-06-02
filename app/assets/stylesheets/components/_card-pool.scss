@@ -15,28 +15,24 @@
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
   border-radius: 8px;
 }
+.card-pool-height{
+  min-height: 30vh;
+  background-size: cover;
+}
 
-.card-pool h2 {
-  font-size: 16px;
+.card-pool-infos h2 {
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
   color: $blue;
 }
 
-.card-pool p {
-  font-size: 12px;
+.card-pool-infos p {
+  font-size: 16px;
   opacity: .7;
   margin: 0;
   color: $blue;
   font-weight: lighter;
-}
-
-
-.card-pool .card-pool-infos {
-  padding: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
 }
 
 .card-pool img {
@@ -48,4 +44,11 @@
   height: 100vh;
   position: sticky;
   top: 0;
+}
+
+.card-pool-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5px;
 }
