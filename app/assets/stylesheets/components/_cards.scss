@@ -41,7 +41,7 @@
 }
 
 .card-map-calendar img {
-  border-radius: 5px;
+  border-radius: px;
 }
 
 .calendar-form {
@@ -50,10 +50,22 @@
   width: 100%;
 }
 
+.input-calendar {
+  width:120%;
+}
+
 .btn-primary {
     color: white;
 }
 
 .btn{
   color: white;
+}
+
+.map-show{
+  border-radius: 8px;
+  height: 400px;
+  width: 100%;
+  margin-top: 7px;
+  object-fit: cover;
 }
