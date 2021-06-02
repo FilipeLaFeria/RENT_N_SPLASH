@@ -1,6 +1,11 @@
+.main-container {
+  display: flex;
+}
+
 .pools-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-grow: 1;
   grid-gap: 20px;
   padding: 30px;
   background-color: white;
@@ -15,14 +20,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-  color: blue;
+  color: $blue;
 }
 
 .card-pool p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
-  color: blue;
+  color: $blue;
   font-weight: lighter;
 }
 
@@ -37,4 +42,10 @@
 .card-pool img {
   width: 100%;
   border-radius: 8px 8px 0 0;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
