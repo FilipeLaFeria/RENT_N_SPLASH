@@ -11,4 +11,7 @@ class PoolsController < ApplicationController
   #    @pool = Pool.find(params[:id])
   # end
 
+  def index
+    @pools = Pool.all
+  end
 end

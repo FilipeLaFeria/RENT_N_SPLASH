@@ -1,0 +1,18 @@
+<div class="pools-container">
+  <% @pools.each do |pool| %>
+    <%= link_to pool_path(pool), class:'text-decoration-none' do %>
+      <div class="card-pool d-flex justify-content-center">
+        <div>
+          <%= cl_image_tag pool.photo.key, height: 300, crop: :fill %>
+            <div class="card-pool-infos">
+              <div>
+                <h2><%= pool.title %></h2>
+                <p><%= pool.address %></p>
+              </div>
+              <h2 class="card-pool-size"><%= pool.size %></h2>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+</div>
