@@ -9,6 +9,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
   color: blue;
+  font-size: 20px;
 }
 .my_card img {
   height: 400px;
@@ -19,12 +20,9 @@
 
 .my_card p{
   margin-bottom: 0px;
+  font-size: 14px
 }
 
-
-.datepicker {
-  width: 100%;
-}
 
 
 .card-map-calendar{
@@ -32,3 +30,15 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.card-map-calendar img {
+  border-radius: 5px;
+
+}
+
+.calendar-form {
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+
