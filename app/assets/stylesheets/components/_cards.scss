@@ -1,7 +1,7 @@
-.container {
+.containe {
   display: block;
   width: 1200px;
-  height: 100vh;
+  height: 800vh;
   margin: 20px auto;
   padding: 16px;
   border-radius: 5px;
@@ -25,6 +25,10 @@
   padding-top: 5px;
 }
 
+.info{
+  margin-top: 30px;
+}
+
 .my_card h3 {
   margin-top: 6px;
 }
@@ -41,7 +45,7 @@
 }
 
 .card-map-calendar img {
-  border-radius: px;
+  border-radius: 8px;
 }
 
 .calendar-form {
@@ -51,7 +55,12 @@
 }
 
 .input-calendar {
-  width:120%;
+  width:30%;
+  margin-bottom: 10px;
+}
+
+.btn-back {
+  margin-bottom: 20px;
 }
 
 .btn-primary {
@@ -62,10 +71,10 @@
   color: white;
 }
 
-.map-show{
+#map.map-show{
   border-radius: 8px;
   height: 400px;
-  width: 100%;
+  width: 80%;
   margin-top: 7px;
-  object-fit: cover;
+  position: relative;
 }
