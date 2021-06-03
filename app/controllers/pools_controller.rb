@@ -16,8 +16,6 @@ class PoolsController < ApplicationController
   def show
     @pool = Pool.find(params[:id])
     @nearby = Pool.near(@pool, 50)
-    @markers = [{
-
     @markers = [
       {
         lat: @pool.latitude,
