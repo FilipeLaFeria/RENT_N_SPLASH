@@ -1,12 +1,14 @@
 class PoolsController < ApplicationController
-  #before_action :set_pool, only: [:show]
+  # before_action :set_pool, only: [:show]
 
   def index
     @pools = Pool.all
-    @markers = @pools.geocoded.map do|pool|
+    @markers = @pools.geocoded.map do |pool|
       {
         lat: pool.latitude,
-        lng: pool.longitude
+        lng: pool.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { pool: pool }),
+        image_url: helpers.asset_url('logo.png')
       }
     end
   end
@@ -15,9 +17,15 @@ class PoolsController < ApplicationController
     @pool = Pool.find(params[:id])
     @nearby = Pool.near(@pool, 50)
     @markers = [{
+
+    @markers = [
+      {
         lat: @pool.latitude,
-        lng: @pool.longitude
-      }]
+        lng: @pool.longitude,
+        image_url: helpers.asset_url('logo.png'),
+        info_window: render_to_string(partial: "info_window", locals: { pool: @pool }),
+      }
+    ]
   end
 
   private
@@ -25,5 +33,4 @@ class PoolsController < ApplicationController
   # def set_pool
   #    @pool = Pool.find(params[:id])
   # end
-
 end
