@@ -16,6 +16,7 @@
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
   border-radius: 8px;
 }
+
 .card-pool-height{
   min-height: 30vh;
   background-size: cover;
@@ -52,4 +53,9 @@
   justify-content: space-between;
   align-items: flex-end;
   padding: 5px;
+}
+
+.back-add-buttons {
+  margin-top: 20px;
+  margin-left: 15px;
 }

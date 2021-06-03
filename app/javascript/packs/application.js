@@ -35,8 +35,25 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 import { loadDynamicBannerText } from '../plugins/banner';
 
+
+
 document.addEventListener('turbolinks:load', () => {
-  initMapbox();
-  initFlatpickr();
+  if (document.querySelector(".pools_index")) {
+    initMapbox();
+  }
+
+
+  if (document.querySelector(".pools_show")) {
+    initFlatpickr();
+    initMapbox();
+  }
+
+  if (document.querySelector(".pages_home")) {
   loadDynamicBannerText();
+  }
+
+   if (document.querySelector(".pools_my_pools")) {
+    initMapbox();
+  }
+
 });
