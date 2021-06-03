@@ -39,4 +39,9 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initFlatpickr();
   loadDynamicBannerText();
+
+  if (document.querySelector(".pages_dashboard")) {
+    initMapbox();
+  }
+
 });

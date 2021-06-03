@@ -1,5 +1,6 @@
 class PoolsController < ApplicationController
-  # before_action :set_pool, only: [:show]
+  before_action :set_pool, only: [:show]
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @pools = Pool.all
@@ -14,7 +15,7 @@ class PoolsController < ApplicationController
   end
 
   def show
-    @pool = Pool.find(params[:id])
+    # @pool = Pool.find(params[:id])
     @nearby = Pool.near(@pool, 50)
     @markers = [
       {
@@ -24,11 +25,12 @@ class PoolsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { pool: @pool }),
       }
     ]
+    @booking = Booking.new
   end
 
   private
 
-  # def set_pool
-  #    @pool = Pool.find(params[:id])
-  # end
+  def set_pool
+     @pool = Pool.find(params[:id])
+  end
 end
