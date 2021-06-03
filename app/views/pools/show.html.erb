@@ -1,6 +1,8 @@
 <div class="containe" style="width: 100%; height: 400px;">
   <div class="btn-back">
-    <%= link_to "Back to list", pools_path, class: "btn btn-flat" %>
+    <%= link_to pools_path, class: "btn btn-ghost" do %>
+      <i class="fas fa-undo"></i> Back to List
+    <% end %>
   </div>
   <div class="row">
     <div class="my_card d-flex justify-content-between col-12">
