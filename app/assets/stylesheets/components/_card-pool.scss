@@ -6,10 +6,10 @@
 .pools-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  flex-grow: 1;
   grid-gap: 20px;
   padding: 30px;
   background-color: white;
+   flex-grow: 1;
 }
 
 .card-pool {
@@ -58,4 +58,8 @@
 .back-add-buttons {
   margin-top: 20px;
   margin-left: 15px;
+}
+
+.pools-and-buttons {
+   flex-grow: 1;
 }
