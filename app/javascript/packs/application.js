@@ -48,13 +48,13 @@ document.addEventListener('turbolinks:load', () => {
   }
 
   if (document.querySelector(".pages_home")) {
-  loadDynamicBannerText();
+    loadDynamicBannerText();
   }
   if (document.querySelector(".pages_dashboard")) {
     initMapbox();
   }
 
-   if (document.querySelector(".pools_my_pools")) {
+  if (document.querySelector(".pools_my_pools")) {
     initMapbox();
   }
 
