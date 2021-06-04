@@ -1,3 +1,17 @@
+<div class="containe" style="width: 100%; height: 400px;">
+  <div class="btn-back">
+    <%= link_to "Back to list", :back, class: "btn btn-flat" %>
+  </div>
+  <div class="row">
+    <div class="my_card d-flex justify-content-between col-12">
+      <div class="card-img-info col-6">
+        <%= cl_image_tag @pool.photo.key, height: 600, crop: :fill %>
+        <div class="info">
+          <h2><%= @pool.title %></h2>
+            <p><%= @pool.address %></p>
+            <p><%= @pool.size %> m<sup>2</sup></p>
+            <p><%= @pool.description %></p>
+
 <div class="container-show">
 
   <div class="card-show col-12 p-3">
@@ -5,6 +19,7 @@
       <div class="photo-calendar-description col-8">
         <div class="card-img-info">
           <%= cl_image_tag @pool.photo.key, crop: :fill %>
+
         </div>
         <div class="column-calendar-map d-flex justify-content-between col-12 p-0">
         <div class= "info-calendar">
