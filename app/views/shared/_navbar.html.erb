@@ -9,7 +9,7 @@
     params[:query],
     class: "form-control mr-3",
     placeholder: "Search for a pool" %>
-    <%= submit_tag "Dive in", class: "btn btn-flat fas fa-water" %>
+    <%= submit_tag "Dive in", class: "btn btn-flat fas fa-water search-bar-dive-in" %>
   <% end %>
 
 
@@ -22,7 +22,6 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
           <%= link_to "Pools", pools_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
