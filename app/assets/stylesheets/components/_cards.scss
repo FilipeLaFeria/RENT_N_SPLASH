@@ -35,7 +35,6 @@
   padding-top: 5px;
 }
 
-
 .info{
   margin-top: 30px;
   background: white;
@@ -45,6 +44,14 @@
   border-radius: 8px;
 }
 
+.calendar-form .btn-flat {
+  font-size: 16px;
+  padding: 8px 24px;
+}
+
+.btn-back .btn-ghost{
+  text-align: center;
+}
 
 .card-map-calendar {
   display: flex;
@@ -75,3 +82,4 @@
 .near {
   margin-top: 40px;
 }
+

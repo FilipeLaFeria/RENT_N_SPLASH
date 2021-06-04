@@ -4,44 +4,49 @@
     <div class="d-flex justify-content-between col-12">
       <div class="photo-calendar-description col-8">
         <div class="card-img-info">
-          <%= cl_image_tag @pool.photo.key, crop: :fill %>
+
+           <%= cl_image_tag @pool.photo.key, crop: :fill %>
         </div>
-      <div class="column-calendar-map d-flex justify-content-between col-12 p-0">
-        <div class= "info-calendar">
-          <div class="info">
-            <h2><%= @pool.title %></h2>
-                  <h4>Address:</h4>
-                    <p><%= @pool.address %></p>
-                    <h4>Pool size:</h4>
-                      <p><%= @pool.size %> m<sup>2</sup></p>
-                  <h4> </h4>
-                  <h4>What to expect...</h4>
-                      <p><%= @pool.description %></p>
-          </div>
-          <div class="btn-back my-3">
-            <%= link_to "Back to list", pools_path, class: "btn btn-ghost form-control" %>
-          </div>
-        </div>
-        <div class="form-wrapper"><strong>Date</strong>
-                    <%= simple_form_for :search, method: "get" do |f| %>
-            <div class="calendar-form">
- <%= f.input :date, as: :string, required: false, label: false, input_html: {class: "datepicker"} %>
-              <%= f.button :submit, "Book this pool", class: "btn btn-flat form-control"%>
+
+        <div class="column-calendar-map d-flex justify-content-between col-12 p-0">
+          <div class= "info-calendar">
+            <div class="info">
+              <h2><%= @pool.title %></h2>
+              <h4>Address:</h4>
+              <p><%= @pool.address %></p>
+              <h4>Pool size:</h4>
+              <p><%= @pool.size %> m<sup>2</sup></p>
+              <h4>What to expect...</h4>
+              <p><%= @pool.description %></p>
             </div>
-          <% end %>
+
+            <div class="btn-back my-3">
+              <%= link_to "Back to list", pools_path, class: "btn-ghost form-control" %>
+            </div>
+            
+          </div>
+
+          <div class="form-wrapper"><strong>Date</strong>
+            <%= simple_form_for :search, method: "get" do |f| %>
+              <div class="calendar-form">
+                <%= f.input :date, as: :string, required: false, label: false, input_html: {class: "datepicker"} %>
+                <%= f.button :submit, "Book this pool", class: "btn-flat form-control"%>
+              </div>
+            <% end %>
+          </div>
+          
         </div>
       </div>
-    </div>
 
-    <div class="card-map col-4">
-      <div id="map" class="map-show my-3" style="width: 90%; height: 620px;"data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      <div class="card-map col-4">
+        <div id="map" class="map-show my-3" style="width: 90%; height: 620px;"data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
     </div>
   </div>
 
-</div>
+ <div class="near"><h3>Near by</h3></div>
 
-<div class="near"><h3>Near by</h3></div>
-<div class="pools-container" style="border-radius:8px; background: white; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+  <div class="pools-container" style="border-radius:8px; background: white; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
     <% @nearby.each do |pool| %>
       <%= link_to pool_path(pool), class:'text-decoration-none' do %>
         <div class="card-pool card-pool-height d-flex justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path pool.photo.key, height: 300, crop: :fill %>')">
@@ -51,11 +56,11 @@
             <h2><%= pool.title %></h2>
             <p><%= pool.address %></p>
           </div>
-            <h4 class="card-pool-size"> <%= pool.size %> m<sup>2</sup></h4>
+          <h4 class="card-pool-size"> <%= pool.size %> m<sup>2</sup></h4>
         </div>
-        <% end %>
       <% end %>
-    </div>
+    <% end %>
+  </div>
 
 </div>
 
