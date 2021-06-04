@@ -6,10 +6,10 @@
         <div class="card-img-info">
           <%= cl_image_tag @pool.photo.key, crop: :fill %>
         </div>
-        <div class="column-calendar-map d-flex justify-content-between col-12 p-0">
+      <div class="column-calendar-map d-flex justify-content-between col-12 p-0">
         <div class= "info-calendar">
           <div class="info">
-                <h2><%= @pool.title %></h2>
+            <h2><%= @pool.title %></h2>
                   <h4>Address:</h4>
                     <p><%= @pool.address %></p>
                     <h4>Pool size:</h4>
@@ -19,7 +19,7 @@
                       <p><%= @pool.description %></p>
           </div>
           <div class="btn-back my-3">
-            <%= link_to "Back to list", pools_path, class: "btn btn-flat form-control" %>
+            <%= link_to "Back to list", pools_path, class: "btn btn-ghost form-control" %>
           </div>
         </div>
         <div class="form-wrapper"><strong>Date</strong>
@@ -56,5 +56,6 @@
         <% end %>
       <% end %>
     </div>
+
 </div>
 
