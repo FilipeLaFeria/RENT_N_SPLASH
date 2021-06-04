@@ -49,7 +49,7 @@ document.addEventListener('turbolinks:load', () => {
 
   if (document.querySelector(".pages_home")) {
   loadDynamicBannerText();
-
+  }
   if (document.querySelector(".pages_dashboard")) {
     initMapbox();
   }
