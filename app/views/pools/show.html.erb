@@ -1,6 +1,9 @@
 <div class="containe" style="width: 100%; height: 400px;">
   <div class="btn-back">
-    <%= link_to "Back to list", :back, class: "btn btn-flat" %>
+    <%= link_to :back, class: "btn btn-ghost" do %>
+      <i class="fas fa-undo"></i> Back to List
+    <% end %>
+
   </div>
   <div class="row">
     <div class="my_card d-flex justify-content-between col-12">
@@ -21,6 +24,19 @@
           <%= cl_image_tag @pool.photo.key, crop: :fill %>
 
         </div>
+
+        <div class="container">
+      <%@nearby.each do |pool| %>
+     <%= pool.title %>
+    <% end %>
+    </div>
+      </div>
+      <div class="card-map-calendar col-6">
+        <div id="map" class="map-show" style="width: 100%; height: 400px;"data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        <div class="form-wrapper">Pick a date
+
+          <%= simple_form_for [ @pool, @booking ] do |f| %>
+
         <div class="column-calendar-map d-flex justify-content-between col-12 p-0">
         <div class= "info-calendar">
           <div class="info">
@@ -39,6 +55,7 @@
         </div>
         <div class="form-wrapper"><strong>Date</strong>
           <%= simple_form_for :search, method: "get" do |f| %>
+
             <div class="calendar-form">
               <%= f.input :date, as: :string, required: false, label: false, input_html: {class: "datepicker"} %>
               <%= f.button :submit, "Book this pool", class: "btn btn-flat form-control"%>
