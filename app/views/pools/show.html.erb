@@ -1,10 +1,10 @@
-
 <div class="container-show">
 
   <div class="card-show col-12 p-3">
     <div class="d-flex justify-content-between col-12">
       <div class="photo-calendar-description col-8">
         <div class="card-img-info">
+
            <%= cl_image_tag @pool.photo.key, crop: :fill %>
         </div>
 
@@ -23,16 +23,18 @@
             <div class="btn-back my-3">
               <%= link_to "Back to list", pools_path, class: "btn-ghost form-control" %>
             </div>
+            
           </div>
 
           <div class="form-wrapper"><strong>Date</strong>
             <%= simple_form_for :search, method: "get" do |f| %>
-            <div class="calendar-form">
-              <%= f.input :date, as: :string, required: false, label: false, input_html: {class: "datepicker"} %>
-              <%= f.button :submit, "Book this pool", class: "btn-flat form-control"%>
-            </div>
-              <% end %>
+              <div class="calendar-form">
+                <%= f.input :date, as: :string, required: false, label: false, input_html: {class: "datepicker"} %>
+                <%= f.button :submit, "Book this pool", class: "btn-flat form-control"%>
+              </div>
+            <% end %>
           </div>
+          
         </div>
       </div>
 
@@ -59,5 +61,6 @@
       <% end %>
     <% end %>
   </div>
+
 </div>
 

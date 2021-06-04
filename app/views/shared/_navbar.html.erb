@@ -9,27 +9,18 @@
     params[:query],
     class: "form-control mr-3",
     placeholder: "Search for a pool" %>
-    <%= submit_tag "Dive in", class: "btn btn-flat fas fa-water" %>
+    <%= submit_tag "Dive in", class: "btn btn-flat fas fa-water search-bar-dive-in" %>
   <% end %>
-
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-          <%= link_to "Pools", pools_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to my_pools_path, class: "nav-link" do %>
-            My Pools
-          <% end %>
-        </li>
+        <li class="nav-item active"> <%= link_to "Pools", pools_path, class: "nav-link" %> </li>
+        <li class="nav-item active"> <%= link_to "My Pools", my_pools_path, class: "nav-link" %> </li>
         <li class="nav-item dropdown">
           <%= image_tag "avatar.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
