@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   resources :bookings ,only: %i[destroy]
 
   get "dashboard", to: "pages#dashboard"
+  
+  resources :pools
+  get "my_pools", to: "pools#my_pools"
+
 end
