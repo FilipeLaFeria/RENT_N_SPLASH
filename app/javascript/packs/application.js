@@ -42,7 +42,6 @@ document.addEventListener('turbolinks:load', () => {
     initMapbox();
   }
 
-
   if (document.querySelector(".pools_show")) {
     initFlatpickr();
     initMapbox();
@@ -50,6 +49,9 @@ document.addEventListener('turbolinks:load', () => {
 
   if (document.querySelector(".pages_home")) {
   loadDynamicBannerText();
+
+  if (document.querySelector(".pages_dashboard")) {
+    initMapbox();
   }
 
    if (document.querySelector(".pools_my_pools")) {

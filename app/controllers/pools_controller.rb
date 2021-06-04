@@ -1,4 +1,5 @@
 class PoolsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   before_action :set_pool, only: %i[show edit update destroy]
 
   def index
@@ -18,7 +19,7 @@ class PoolsController < ApplicationController
   end
 
   def show
-
+    # @pool = Pool.find(params[:id])
     @nearby = Pool.near(@pool, 50)
     @markers = [
     @pool = Pool.find(params[:id])
@@ -31,6 +32,7 @@ class PoolsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { pool: @pool }),
       }
     ]
+    @booking = Booking.new
   end
 
   def my_pools
