@@ -1,6 +1,7 @@
 <div class="main-container p-0 d-flex">
   <div class="pools-and-buttons">
   <div style="background-color: white">
+      <div class="title"><h1>My Pools</h1></div>
       <%= link_to pools_path, class: 'btn btn-flat ml-4 mt-3 my-pools-back-list' do %>
         <i class="fas fa-arrow-left mr-8"></i> Back to list
       <% end %>
@@ -33,5 +34,5 @@
       </div>
       </div>
        </div>
-      <div id="map"style="width: 600px; height: 100vh; "data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      <div id="map"style="width: 600px; height: 90vh; "data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
