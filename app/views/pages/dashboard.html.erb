@@ -1,22 +1,36 @@
-<div class="container" style="display: flex; justify-content: space-around;">
+<div class="main-container p-0 d-flex">
 
-  <div class="bookings-container" style="padding: 0 1em; min-height: 50vh;">
-    <h1 class="intro" style="padding: 0.5em; margin-bottom: 0; ">My bookings</h1>
-    <% @bookings.each do |booking| %>
-      <div class="card-booking">
-        <%= cl_image_tag booking.pool.photo.key, height: 500, crop: :fill %>
-        <div class="card-booking-infos">
+  <div class="pools-and-buttons">
+    <div style="background-color: white">
+      <div class="title"><h1>My Bookings</h1></div>
+      <%= link_to pools_path, class: 'btn btn-flat ml-4 mt-3 my-pools-back-list' do %>
+        <i class="fas fa-arrow-left mr-8"></i> Back to list
+      <% end %>
+      <%= link_to pools_path, class: 'btn btn-flat mt-3 my-pools-add-new' do %>
+        <i class="fas fa-plus"></i> Add a new booking
+      <% end %>
+      <div class="pools-container">
+        <% @bookings.each do |booking| %>
           <div>
-            <h2><%= booking.pool.title %></h2>
-            <p> <%= booking.pool.address %> </p>
+            <div class="card-pool card-pool-height d-flex justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.pool.photo.key, height: 300, crop: :fill %>')">
+            </div>
+            <div class="card-pool-infos">
+              <div>
+                <h2><%= booking.pool.title %></h2>
+                 <p><%= booking.pool.address %></p>
+              </div>
+                <h4 class="card-pool-size dimensions-color"> <%= booking.date %></h4>
+            </div>
+            <%= link_to pool_path(booking), class: 'btn btn-flat my-pools-buttons' do %>
+              <i class="fas fa-eye"></i> Check
+            <% end %>
+            <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-flat hovering-delete' do %>
+              <i class="far fa-trash-alt"></i> Delete
+            <% end %>
           </div>
-          <div style="padding: 1px;">
-            <p> <%= link_to "Remove", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %> </p>
-            <h2 class="card-booking-date"><%= booking.date %></h2>
-          </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
-  <div id="map" style="width: 600px; min-height: 50vh; border-radius: 8px;" data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div id="map"style="width: 600px; height: 90vh; "data-markers="<%= @markers.to_json %>"data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
