@@ -1,21 +1,31 @@
-.containe {
+.container-show {
   display: block;
   width: 1200px;
   height: 800vh;
   margin: 20px auto;
   padding: 16px;
   border-radius: 5px;
-}
-
-.my_card {
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 16px;
+  padding: 10px;
   color: $blue;
   font-size: 20px;
 }
-.my_card img {
-  height: 400px;
+
+.card-show {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.map-show{
+  border-radius: 8px;
+}
+
+.row-image-map {
+  padding: 16px;
+  justify: space-between;
+}
+.card-img-info img {
+  height: 200px;
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
@@ -25,18 +35,16 @@
   padding-top: 5px;
 }
 
+
 .info{
   margin-top: 30px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 23px;
+  width: 48vh;
+  border-radius: 8px;
 }
 
-.my_card h3 {
-  margin-top: 6px;
-}
-
-.my_card p {
-  margin-bottom: 2px;
-  font-size: 14px
-}
 
 .card-map-calendar {
   display: flex;
@@ -44,37 +52,26 @@
   justify-content: space-between;
 }
 
-.card-map-calendar img {
-  border-radius: 8px;
-}
-
-.calendar-form {
-  justify-content: space-between;
-  align-items: end;
-  width: 100%;
-}
 
 .input-calendar {
   width:30%;
   margin-bottom: 10px;
 }
 
-.btn-back {
-  margin-bottom: 20px;
-}
 
-.btn-primary {
-    color: white;
-}
-
-.btn{
-  color: white;
-}
-
-#map.map-show{
+.card-map{
   border-radius: 8px;
   height: 400px;
   width: 80%;
   margin-top: 7px;
-  position: relative;
+  position: sticky;
+}
+
+.photo-calendar-description {
+  padding: 0;
+  margin: 16px;
+}
+
+.near {
+  margin-top: 40px;
 }
